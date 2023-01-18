@@ -8,6 +8,7 @@
 :root {
 
     --dark-blue-300: #0A3871;
+    --gray-500: #343A40;
     --gray-400: #67808E;
     --light-blue-100: #F3F5FC;
     --gray-100: #D8DFE8;
@@ -40,8 +41,8 @@ header{
     font-size: 2.5rem;
     font-family: var(--font2);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: var(--dark-blue-300);
 }
 
 .ingresaTexto {
@@ -51,6 +52,13 @@ header{
     border: none;
     background-color: var(--light-blue-100);
 
+}
+
+.ingresaTexto::placeholder {
+    color: var(--dark-blue-300);
+    font-family: var(--font1);
+    font-size: 2rem;
+    text-align: center;
 }
 
 .warning {
@@ -74,7 +82,7 @@ header{
 
 .botones {
     width: 100%;
-    margin: 0 auto;
+    margin: 15px auto;
     display: grid;
     align-items: center;
     justify-content: space-around;
@@ -100,13 +108,32 @@ header{
 }
 
 .mostrarTexto {
-    margin: 15px 20px;
+    margin: 40px 20px;
     width: 90%;
-    height: 400px;
+    height: 600px;
     border: none;
     background-color: white;
-    border-radius: 18px;
+    border-radius: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text1 {
+    margin: 10px 8px;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--gray-500);
+    font-family: var(--font1);
+}
+
+.text2 {
+    margin: 15px 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    font-family: var(--font1);
 }
 
 .copy {
