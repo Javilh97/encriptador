@@ -120,8 +120,12 @@ header{
     align-items: center;
 }
 
+.muneco {
+    margin: 20px 0;
+}
+
 .text1 {
-    margin: 10px 8px;
+    margin: 20px 8px;
     text-align: center;
     font-size: 1.7rem;
     color: var(--gray-500);
@@ -137,10 +141,31 @@ header{
 }
 
 .copy {
+    margin: 3rem 0 0 0;
     padding: 2em 9em;
     border-radius: 25px;
     color: var(--dark-blue-300);
     background-color: var(--light-blue-100);
     border: 2px solid var(--dark-blue-300);
     font-family: var(--font1);
+}
+
+.footer{
+    padding: 3em;
+    background-color: var(--light-blue-100);
+    text-align: center;
+}
+
+.footer__social{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.copyright {
+    font-family: var(--font1);
+    margin: 1.2em;
 }
