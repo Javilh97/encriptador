@@ -12,27 +12,47 @@
         <img class="logo" src="img/Logo.png" alt="logo">
         <h1 class="titulo">Encrypter</h1>
     </header>
+    <main>
+
+        <input class="ingresaTexto" id="textEncript" type="text" placeholder="Ingresa el texto aquí">
     
-    <input class="ingresaTexto" id="textEncript" type="text" placeholder="Ingresa el texto aquí">
+        <div class="warning">
+            <img class="alerta" src="img/exclamation.svg" alt="alerta">
+            <label class="nota">Solo letras minúsculas y sin acentos.</label>
+        </div>
+    
+        <div class="botones">
+            <input class="encriptar" type="button" value="Encriptar" onclick="encript()">
+            <input class="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+        </div>
+    
+        <div id="mostrarTexto" class="mostrarTexto">
+            <div id="ocultar" class="">
+                <img src="img/Muñeco.png" alt="imagen" class="muneco">
+                <h2 class="text1">Ningún mensaje fue encontrado</h2>
+                <h3 class="text2">Ingresa el texto que deseas encriptar o desencriptar.</h3>
+            </div>
+            
+            <input id="copy" class="copy" type="button" value="Copy" onclick="copy">
+        </div>
+    </main>
 
-    <div class="warning">
-        <img class="alerta" src="img/exclamation.svg" alt="alerta">
-        <label class="nota">Solo letras minúsculas y sin acentos.</label>
-    </div>
-
-    <div class="botones">
-        <input class="encriptar" type="button" value="Encriptar">
-        <input class="desencriptar" type="button" value="Desencriptar">
-    </div>
-
-    <div id="mostrarText" class="mostrarTexto">
-        <img src="img/Muñeco.png" alt="imagen" class="muneco">
-        <h2 class="text1">Ningún mensaje fue encontrado</h2>
-        <h3 class="text2">Ingresa el texto que deseas encriptar o desencriptar.</h3>
-        
-        <input id="copy" class="copy" type="button" value="Copy">
-    </div>
-
+    <footer class="footer">
+        <nav class="footer__social">
+            
+            <a href="#" class="footer__media">
+              <img src="img/github.svg" alt="github" class="footer__icon">
+            </a>
+            <a href="#" class="footer__media">
+              <img src="img/linkedin.svg" alt="linkedin" class="footer__icon">
+            </a>
+            <!--<a href="#" class="footer__media">
+              <img src="images/icon-twitter.svg" alt="twitter" class="footer__icon">
+            </a>-->
+            
+          </nav>
+          <h4 class="copyright">© Copyright 2023 Todos los derechos reservados</h4>
+    </footer>
 
 
     <script src="index.js"></script>
