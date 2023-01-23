@@ -8,11 +8,6 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
 */
 
-
-document.getElementById("copy").style.visibility = "hidden";
-
-
-
 function encript() {
     //const regex = /[aeiou]/g;
     
@@ -26,21 +21,21 @@ function encript() {
     nuevaString = nuevaString.replace(/o/img, "ober");
     nuevaString = nuevaString.replace(/u/img, "ufat");
 
-    document.getElementById("ocultar").innerHTML = nuevaString;    
+    document.getElementById("textoDesencriptado").innerHTML = nuevaString;  
+
+    document.getElementById("copy").style.display = "show";
+    document.getElementById("copy").style.display = "inherit";
     
-
-
-    /* for (let i = 0; i <= string.length; i++) {
-            
-        console.log(string[i].replace('e','enter'));
-    }
-
-    console.log(nuevaString); */
-    document.getElementById("copy").style.visibility = "";
+    document.getElementById("textoDesencriptado").style.display = "show";
+    document.getElementById("textoDesencriptado").style.display = "inherit";
+    
+    document.getElementsByClassName("ocultar").style.display = "none";
+    document.getElementsByClassName("ocultar").style.display = "inherit";
+    
 }
 
 function desencriptar() {
-    let string = document.getElementById("textEncript").value;
+    let string = document.getElementById("textEncript").value.toLowerCase();
     //let nuevaString = string.match(regex).length;
     //console.log(nuevaString);
 
@@ -50,14 +45,19 @@ function desencriptar() {
     nuevaString = nuevaString.replace(/ober/img, "o");
     nuevaString = nuevaString.replace(/ufat/img, "u");
 
-    document.getElementById("ocultar").innerHTML = nuevaString;    
+    document.getElementById("textoDesencriptado").innerHTML = nuevaString;    
+
+    document.getElementById("copy").style.display = "show";
+    document.getElementById("copy").style.display = "inherit";
     
 }
 
 function copy() {
-    let copyText = document.querySelector("#ocultar");
-    copyText.select();
+    let contenido = document.querySelector("#textoDesencriptado");
+    contenido.select();
     document.execCommand("copy");
-  }
+}
+
+//document.querySelector("#copy").addEventListener("click", copy);
 
 
