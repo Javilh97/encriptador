@@ -41,6 +41,7 @@ inserción del texto que será encriptado o desencriptado, y el usuario debe pod
 
 ## 📷 Screenshot
 
+![Mobile design](./img/desktop.png)
 
 ## 🔗Links
 
