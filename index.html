@@ -12,7 +12,7 @@
         <img class="logo" src="img/Logo.png" alt="logo">
         <h1 class="titulo">Encrypter</h1>
     </header>
-    <main>
+    <main class="main">
 
         <input class="ingresaTexto" id="textEncript" type="text" placeholder="Ingresa el texto aquí">
     
@@ -22,28 +22,31 @@
         </div>
     
         <div class="botones">
-            <input class="encriptar" type="button" value="Encriptar" onclick="encript()">
-            <input class="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+            <button class="encriptar" onclick="encript()">Encriptar</button>
+            <!--<input class="encriptar" type="button" value="Encriptar" onclick="encript()">-->
+            <button class="desencriptar" onclick="desencriptar()">Desencriptar</button>
+            <!--<input class="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">-->
         </div>
     
         <div id="mostrarTexto" class="mostrarTexto">
-            <div id="ocultar" class="">
-                <img src="img/Muñeco.png" alt="imagen" class="muneco">
-                <h2 class="text1">Ningún mensaje fue encontrado</h2>
-                <h3 class="text2">Ingresa el texto que deseas encriptar o desencriptar.</h3>
+            <div id="ocultar" class="ocultar">
+                <textarea class="textoDesencriptado" name="resultado" id="textoDesencriptado" cols="43" rows="30"></textarea>
+                <img src="img/Muñeco.png" alt="imagen" class="muneco ocultar">
+                <h2 class="text1 ocultar">Ningún mensaje fue encontrado</h2>
+                <h3 class="text2 ocultar">Ingresa el texto que deseas encriptar o desencriptar.</h3>
             </div>
-            
-            <input id="copy" class="copy" type="button" value="Copy" onclick="copy">
+            <button id="copy" class="copy" onclick="copy()">Copiar</button>
+            <!--<input id="copy" class="copy" type="button" value="Copy">-->
         </div>
     </main>
 
     <footer class="footer">
         <nav class="footer__social">
             
-            <a href="#" class="footer__media">
+            <a href="https://github.com/Javilh97" target="_blank" class="footer__media">
               <img src="img/github.svg" alt="github" class="footer__icon">
             </a>
-            <a href="#" class="footer__media">
+            <a href="https://www.linkedin.com/in/javierlhernandez/" target="_blank" class="footer__media">
               <img src="img/linkedin.svg" alt="linkedin" class="footer__icon">
             </a>
             <!--<a href="#" class="footer__media">
@@ -53,7 +56,6 @@
           </nav>
           <h4 class="copyright">© Copyright 2023 Todos los derechos reservados</h4>
     </footer>
-
 
     <script src="index.js"></script>
 </body>
