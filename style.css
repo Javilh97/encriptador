@@ -22,6 +22,10 @@ body {
     background-color: var(--light-blue-100);
 }
 
+.main{
+    width: 100%;
+}
+
 .container {
     padding: 30px 0;
     width: 90%;
@@ -98,6 +102,13 @@ header{
     border: none;
 }
 
+.encriptar:hover {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
+    cursor: pointer;
+}
+
 .desencriptar {
     padding: 2em 10em;
     border-radius: 25px;
@@ -105,6 +116,12 @@ header{
     background-color: var(--light-blue-100);
     border: 2px solid var(--dark-blue-300);
     font-family: var(--font1);
+}
+
+.desencriptar:hover {
+    background-color: var(--dark-blue-300);
+    color: var(--light-blue-100);
+    cursor: pointer;
 }
 
 .mostrarTexto {
@@ -141,6 +158,7 @@ header{
 }
 
 .copy {
+    display: none;
     margin: 3rem 0 0 0;
     padding: 2em 9em;
     border-radius: 25px;
@@ -150,13 +168,19 @@ header{
     font-family: var(--font1);
 }
 
-.footer{
+.copy:hover {
+    background-color: var(--dark-blue-300);
+    color: var(--light-blue-100);
+    cursor: pointer;
+}
+
+.footer {
     padding: 3em;
     background-color: var(--light-blue-100);
     text-align: center;
 }
 
-.footer__social{
+.footer__social {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max-content;
@@ -168,4 +192,61 @@ header{
 .copyright {
     font-family: var(--font1);
     margin: 1.2em;
+}
+
+/* Small devices (portrait tablets and large phones) */
+@media (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets) */
+@media (min-width: 768px) {
+    .main {
+        /*width: 100%;*/
+        padding: 5rem;
+        display: grid;
+        grid-template-rows: 75% 5% 20%;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 
+        "ingresaTexto mostrarTexto"
+        "warning  mostrarTexto"
+        "botones mostrarTexto";
+    }
+
+    .ingresaTexto {
+        width: 100%;
+        grid-area: ingresaTexto;
+    }
+
+    .mostrarTexto {
+        width: 70%;
+        height: 600px;
+        margin: 0 auto;
+        grid-area: mostrarTexto;
+    }
+
+    .warning {
+        grid-area: warning;
+    }
+
+    .botones {
+        grid-area: botones;
+        display: flex;
+
+    }
+
+    .textoDesencriptado {
+        display: none;
+    }
+
+}
+
+/* large devices (laptops/ desktops) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops) */
+@media (min-width: 1200px) {
+
 }
